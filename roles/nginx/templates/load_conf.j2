@@ -1,0 +1,14 @@
+upstream www {
+        server 172.31.93.234;
+        server 172.31.83.90;
+}
+server {
+        listen 80;
+        server_name example.atlantic.net;
+        location / {
+          proxy_pass http://www;
+        }
+}
+
+
+

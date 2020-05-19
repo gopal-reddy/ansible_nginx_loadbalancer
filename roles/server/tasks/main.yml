@@ -1,10 +1,10 @@
 ---
 - name: Servers | Install useful server packages.
-  apt: >
-    pkg={{ item }}
-    state=installed
-    update-cache=yes
-  with_items:
+  apt: 
+    name: "{{ item }}"
+    state: latest
+    update-cache: yes
+  loop:
     - ufw
     - htop
     - vim
