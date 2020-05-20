@@ -1,7 +1,6 @@
 ---
 - name: Configure NGINX proxy
-  hosts: all
+  hosts: appservers11
   become: yes
   roles:
-    - { role: server }
-    - { role: nginx }
+    - { role: redis }
